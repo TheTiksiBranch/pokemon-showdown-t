@@ -3,7 +3,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	ivysaur: {
-		randomBattleMoves: ["sunnday", "solarbem", "synthesis", "growth", "weatherball", "sleeppowder"],
+		randomBattleMoves: ["sunnday", "solarbeam", "synthesis", "growth", "weatherball", "sleeppowder"],
 		randomBattleLevel: 82, 
 		tier: "UU",
 	},
