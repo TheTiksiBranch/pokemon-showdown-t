@@ -1472,8 +1472,8 @@ export class RandomTeams {
 				}
 
 				if (restrict && !species.isMega) {
-					// Limit one Pokemon per tier, two for Monotype
-					if ((tierCount[tier] >= (isMonotype ? 2 : 3)) && !this.randomChance(1, Math.pow(5, tierCount[tier]))) {
+					// Limit FIVE Pokemon per tier, two for Monotype
+					if ((tierCount[tier] >= (isMonotype ? 2 : 5)) && !this.randomChance(1, Math.pow(5, tierCount[tier]))) {
 						continue;
 					}
 
@@ -1489,7 +1489,7 @@ export class RandomTeams {
 						if (skip) continue;
 					}
 
-					// Limit one of any type combination, two in Monotype
+					// Limit THREE of any type combination, two in Monotype
 					if (typeComboCount[typeCombo] >= (isMonotype ? 2 : 3)) continue;
 				}
 
