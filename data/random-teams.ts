@@ -1303,8 +1303,7 @@ export class RandomTeams {
 			(!!counter['speedsetup'] || hasMove['trickroom'] || !!counter['drain'] || hasMove['psystrike'] || (species.baseStats.spe > 40 && species.baseStats.hp + species.baseStats.def + species.baseStats.spd < 275))
 		) {
 			item = 'Life Orb';
-		} else {
-			item = 'Eviolite';
+		}
 
 		// For Trick / Switcheroo
 		if (item === 'Leftovers' && hasType['Poison']) {
@@ -1360,7 +1359,7 @@ export class RandomTeams {
 		}
 
 		// Minimize confusion damage
-		if (!counter['Physical'] && !hasMove['copycat'] && !hasMove['transform']) {
+		if (!counter['Physical'] && !hasMove['transform'] && (!hasMove['shellsidearm'] || !counter.Status)) {
 			evs.atk = 0;
 			ivs.atk = 0;
 		}
@@ -1466,15 +1465,15 @@ export class RandomTeams {
 				case 'Darmanitan':
 					if (species.gen === 8 && this.randomChance(1, 2)) continue;
 					break;
-				case 'Appletun': case 'Butterfree': case 'Copperajah': case 'Grimmsnarl': case 'Snorlax':
-				case 'Toxtricity': case 'Urshifu': case 'Zacian': case 'Zamazenta':
+				case 'Magearna': case 'Toxtricity': case 'Zacian': case 'Zamazenta':
+				case 'Appletun': case 'Blastoise': case 'Butterfree': case 'Copperajah': case 'Grimmsnarl': case 'Snorlax': case 'Urshifu':
 					if (this.gen >= 8 && this.randomChance(1, 2)) continue;
 					break;
 				}
 
 				if (restrict && !species.isMega) {
-					// Limit FIVE Pokemon per tier, two for Monotype
-					if ((tierCount[tier] >= (isMonotype ? 2 : 5)) && !this.randomChance(1, Math.pow(5, tierCount[tier]))) {
+					// Limit one Pokemon per tier, two for Monotype
+					if ((tierCount[tier] >= (isMonotype ? 2 : 1)) && !this.randomChance(1, Math.pow(5, tierCount[tier]))) {
 						continue;
 					}
 
@@ -1490,8 +1489,8 @@ export class RandomTeams {
 						if (skip) continue;
 					}
 
-					// Limit THREE of any type combination, two in Monotype
-					if (typeComboCount[typeCombo] >= (isMonotype ? 2 : 3)) continue;
+					// Limit one of any type combination, two in Monotype
+					if (typeComboCount[typeCombo] >= (isMonotype ? 2 : 1)) continue;
 				}
 
 				// The Pokemon of the Day
