@@ -1303,7 +1303,10 @@ export class RandomTeams {
 			(!!counter['speedsetup'] || hasMove['trickroom'] || !!counter['drain'] || hasMove['psystrike'] || (species.baseStats.spe > 40 && species.baseStats.hp + species.baseStats.def + species.baseStats.spd < 275))
 		) {
 			item = 'Life Orb';
+		} else {
+			item = 'Eviolite';
 		}
+		
 
 		// For Trick / Switcheroo
 		if (item === 'Leftovers' && hasType['Poison']) {
