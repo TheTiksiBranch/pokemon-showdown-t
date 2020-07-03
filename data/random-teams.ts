@@ -1192,7 +1192,7 @@ export class RandomTeams {
 			item = 'Choice Band';
 		} else if (species.name === 'Farfetch\u2019d') {
 			item = 'Leek';
-		} else if (species.baseSpecies === 'Diglett' || (species.baseSpecies === 'Kadabra') {
+		} else if (species.baseSpecies === 'Diglett' || species.baseSpecies === 'Kadabra') {
 			item = 'Focus Sash';
 		} else if (species.baseSpecies === 'Pikachu') {
 			forme = 'Pikachu' + this.sample(['', '-Original', '-Hoenn', '-Sinnoh', '-Unova', '-Kalos', '-Alola', '-Partner']);
