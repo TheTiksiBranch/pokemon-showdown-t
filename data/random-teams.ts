@@ -1186,23 +1186,25 @@ export class RandomTeams {
 			item = this.sample(species.requiredItems);
 
 		// First, the extra high-priority items
-		} else if (species.name === 'Eternatus' && counter.Status < 2) {
-			item = 'Metronome';
+		} else if (hasMove['electroweb']) {
+			item = 'Sticky Barb';
+		} else if (species.baseSpecies === 'Trapinch') {
+			item = 'Choice Band';
 		} else if (species.name === 'Farfetch\u2019d') {
 			item = 'Leek';
-		} else if (species.baseSpecies === 'Marowak') {
-			item = 'Thick Club';
+		} else if (species.baseSpecies === 'Diglett' || (species.baseSpecies === 'Kadabra') {
+			item = 'Focus Sash';
 		} else if (species.baseSpecies === 'Pikachu') {
 			forme = 'Pikachu' + this.sample(['', '-Original', '-Hoenn', '-Sinnoh', '-Unova', '-Kalos', '-Alola', '-Partner']);
 			item = 'Light Ball';
-		} else if (species.name === 'Shedinja') {
-			item = (!teamDetails.defog && !teamDetails.rapidSpin && !isDoubles) ? 'Heavy-Duty Boots' : 'Focus Sash';
-		} else if (species.name === 'Shuckle' && hasMove['stickyweb']) {
-			item = 'Mental Herb';
-		} else if (species.name === 'Unfezant' || hasMove['focusenergy']) {
-			item = 'Scope Lens';
-		} else if (species.name === 'Wobbuffet') {
-			item = 'Sitrus Berry';
+		} else if (species.baseSpecies === 'Clamperl') {
+			item = 'Deep Sea Tooth';
+		} else if (species.baseSpecies === 'Munchlax' || species.baseSpecies === 'Duosion') {
+			item = 'Leftovers';
+		} else if (ability === 'Galvanize' || species.baseSpecies === 'Kirlia') {
+			item = 'Focus Sash';
+		} else if (hasMove['teleport'] || hasMove['painsplit'] || hasMove['wish'] || hasMove['perishsong'] || hasMove['strengthsap'] || hasMove['rest'] || ability === 'Moody') {
+			item = 'Eviolite';
 		} else if (ability === 'Cheek Pouch' || (ability === 'Emergency Exit' && !!counter['Status']) || ability === 'Harvest' || ability === 'Ripen') {
 			item = 'Sitrus Berry';
 		} else if (ability === 'Gluttony') {
@@ -1215,12 +1217,10 @@ export class RandomTeams {
 			} else {
 				item = (counter.Physical > counter.Special) ? 'Choice Band' : 'Choice Specs';
 			}
-		} else if (species.evos.length && !hasMove['uturn']) {
-			item = 'Eviolite';
 		} else if (hasMove['bellydrum']) {
 			item = (!!counter['priority'] || !hasMove['substitute']) ? 'Sitrus Berry' : 'Salac Berry';
-		} else if (hasMove['meteorbeam']) {
-			item = 'Power Herb';
+		} else if (hasMove['eruption']) {
+			item = 'Choice Scarf';
 		} else if (hasMove['shellsmash']) {
 			item = (ability === 'Sturdy' && !isLead && !isDoubles) ? 'Heavy-Duty Boots' : 'White Herb';
 		} else if (ability === 'Guts' && (hasMove['facade'] || isDoubles)) {
@@ -1303,7 +1303,8 @@ export class RandomTeams {
 			(!!counter['speedsetup'] || hasMove['trickroom'] || !!counter['drain'] || hasMove['psystrike'] || (species.baseStats.spe > 40 && species.baseStats.hp + species.baseStats.def + species.baseStats.spd < 275))
 		) {
 			item = 'Life Orb';
-		}
+		} else {
+			item = 'Eviolite';
 
 		// For Trick / Switcheroo
 		if (item === 'Leftovers' && hasType['Poison']) {
