@@ -4125,7 +4125,6 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "DOU",
 	},
 	pyukumuku: {
-		randomBattleMoves: ["counter", "mirrorcoat", "recover", "toxic"],
 		randomBattleLevel: 88,
 		tier: "Illegal",
 		doublesTier: "(DUU)",
