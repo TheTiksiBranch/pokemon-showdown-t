@@ -1445,8 +1445,8 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	corsolagalar: {
 		randomBattleMoves: ["nightshade", "willowisp", "strengthsap", "haze", "stealthrock"],
-		randomBattleLevel: 80,
-		tier: "OU",
+		randomBattleLevel: 72,
+		tier: "Uber",
 		doublesTier: "LC Uber",
 	},
 	cursola: {
