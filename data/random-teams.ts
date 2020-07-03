@@ -1306,7 +1306,6 @@ export class RandomTeams {
 		} else {
 			item = 'Eviolite';
 		}
-		
 
 		// For Trick / Switcheroo
 		if (item === 'Leftovers' && hasType['Poison']) {
