@@ -1157,8 +1157,8 @@ export class RandomTeams {
 				}
 			} while (rejectAbility);
 
-			if (species.name === 'Azumarill' && !isDoubles) {
-				ability = 'Sap Sipper';
+			if (species.name === 'Graveler-Alola' && !isDoubles) {
+				ability = 'Galvanize';
 			} else if (species.name === 'Copperajah-Gmax') {
 				ability = 'Heavy Metal';
 			} else if (hasAbility['Guts'] && (hasMove['facade'] || (hasMove['rest'] && hasMove['sleeptalk']))) {
@@ -1203,7 +1203,7 @@ export class RandomTeams {
 			item = 'Leftovers';
 		} else if (ability === 'Galvanize' || species.baseSpecies === 'Kirlia') {
 			item = 'Focus Sash';
-		} else if (hasMove['teleport'] || hasMove['painsplit'] || hasMove['wish'] || hasMove['perishsong'] || hasMove['strengthsap'] || hasMove['rest'] || ability === 'Moody') {
+		} else if (hasMove['teleport'] || hasMove['painsplit'] || hasMove['wish'] || hasMove['perishsong'] || hasMove['strengthsap'] || hasMove['rest'] || ability === 'Moody' || species.baseSpecies === 'Natu') {
 			item = 'Eviolite';
 		} else if (ability === 'Cheek Pouch' || (ability === 'Emergency Exit' && !!counter['Status']) || ability === 'Harvest' || ability === 'Ripen') {
 			item = 'Sitrus Berry';
@@ -1218,7 +1218,7 @@ export class RandomTeams {
 				item = (counter.Physical > counter.Special) ? 'Choice Band' : 'Choice Specs';
 			}
 		} else if (hasMove['bellydrum']) {
-			item = (!!counter['priority'] || !hasMove['substitute']) ? 'Sitrus Berry' : 'Salac Berry';
+			item = 'Salac Berry';
 		} else if (hasMove['eruption']) {
 			item = 'Choice Scarf';
 		} else if (hasMove['shellsmash']) {
