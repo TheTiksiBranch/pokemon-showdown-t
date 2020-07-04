@@ -3,7 +3,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	ivysaur: {
-		randomBattleMoves: ["sunnday", "solarbeam", "synthesis", "growth", "weatherball", "sleeppowder"],
+		randomBattleMoves: ["sunnyday", "solarbeam", "synthesis", "growth", "weatherball", "sleeppowder"],
 		randomBattleLevel: 82, 
 		tier: "UU",
 	},
@@ -22,7 +22,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	charmeleon: {
-		randomBattleMoves: ["sunnday", "flamethrower", "dragonpulse", "ancientpower", "overheat"],
+		randomBattleMoves: ["sunnyday", "flamethrower", "dragonpulse", "ancientpower", "overheat"],
 		randomBattleLevel: 84, 
 		tier: "RU",
 	},
