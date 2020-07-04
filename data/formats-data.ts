@@ -1843,7 +1843,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	meditite: {
-		randomBattleMoves: ["highjumpkick", "zenheadbutt", "icepunch", "fakeout", "trick"],
+		randomBattleMoves: ["highjumpkick", "zenheadbutt", "icepunch", "bulletpunch", "trick"],
 		randomBattleLevel: 86,
 		tier: "NU",
 	},
