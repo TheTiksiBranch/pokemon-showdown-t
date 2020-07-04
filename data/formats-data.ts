@@ -1281,7 +1281,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	aipom: {
-		randomBattleMoves: ["doubleedge", "knockoff", "firepunch", "switcheroo", "uturn", "thunderwave"],
+		randomBattleMoves: ["doubleedge", "knockoff", "firepunch", "switcheroo", "uturn"],
 		randomBattleLevel: 84,
 		tier: "RU",
 	},
