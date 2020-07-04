@@ -1705,7 +1705,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC",
 	},
 	kirlia: {
-		randomBattleMoves: ["trickroom", "destinybond", "memento", "hypnosis"],
+		randomBattleMoves: ["trickroom", "destinybond", "memento", "encore"],
 		randomBattleLevel: 86, 
 		tier: "NU",
 	},
