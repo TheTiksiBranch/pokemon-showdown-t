@@ -531,7 +531,7 @@ export const BattleFormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 	},
 	graveleralola: {
-		randomBattleMoves: ["rockblast", "earthquake", "thunderpunch", "explosion", "stealthrock"],
+		randomBattleMoves: ["rockblast", "earthquake", "facade", "explosion", "stealthrock"],
 		randomBattleLevel: 86, 
 		tier: "NU",
 	},
