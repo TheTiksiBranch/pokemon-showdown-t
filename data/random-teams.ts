@@ -1283,7 +1283,7 @@ export class RandomTeams {
 			item = 'Weakness Policy';
 		} else if (counter.damagingMoves.length >= 4 && species.baseStats.hp + species.baseStats.def + species.baseStats.spd >= 200) {
 			item = 'Assault Vest';
-		} else if ((hasMove['clearsmog'] || hasMove['coil'] || hasMove['curse'] || hasMove['dragontail'] || hasMove['healbell'] || hasMove['protect'] || hasMove['sleeptalk']) && (ability === 'Moody' || !isDoubles)) {
+		} else if ((hasMove['clearsmog'] || hasMove['coil'] || hasMove['curse'] || hasMove['dragontail'] || hasMove['healbell'] || (hasMove['protect'] && !species.baseSpecies === 'Combusken') || hasMove['sleeptalk']) {
 			item = 'Eviolite';
 
 		// Eviolite or...
