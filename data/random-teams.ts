@@ -1222,13 +1222,13 @@ export class RandomTeams {
 		} else if (hasMove['eruption']) {
 			item = 'Choice Scarf';
 		} else if (hasMove['shellsmash']) {
-			item = (ability === 'Sturdy' && !isLead && !isDoubles) ? 'Heavy-Duty Boots' : 'White Herb';
+			item = (ability === 'Sturdy' && !isLead && !isDoubles) ? 'Heavy-Duty Boots' : 'Eviolite';
 		} else if (ability === 'Guts' && (hasMove['facade'] || isDoubles)) {
 			item = hasType['Fire'] ? 'Toxic Orb' : 'Flame Orb';
 		} else if ((ability === 'Magic Guard' && counter.damagingMoves.length > 1) || (ability === 'Sheer Force' && !!counter['sheerforce'])) {
 			item = 'Life Orb';
 		} else if (ability === 'Unburden') {
-			item = hasMove['closecombat'] ? 'White Herb' : 'Sitrus Berry';
+			item = hasMove['closecombat'] ? 'Salac Berry' : 'Sitrus Berry';
 		} else if (hasMove['acrobatics']) {
 			item = (ability === 'Grassy Surge') ? 'Grassy Seed' : '';
 		} else if (hasMove['auroraveil'] || hasMove['lightscreen'] && hasMove['reflect']) {
